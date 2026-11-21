@@ -1,0 +1,8 @@
+{
+  "name": "anime-harbor-scene",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node tools/serve.mjs 8080 .", "shot": "node tools/shot.mjs --out shots/hero.png" },
+  "devDependencies": { "puppeteer-core": "23.10.4" }
+}
