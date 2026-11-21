@@ -1,0 +1,13 @@
+{
+  "file_size_bytes": 22440200,
+  "file_size_mb": 21.4,
+  "triangles": 749400,
+  "objects": 99,
+  "draw_calls": 375,
+  "materials": 64,
+  "has_vertex_ao_color0": true,
+  "sign_extras_count": 29,
+  "build_seconds": 64.59,
+  "ao_method": "cycles_cpu_vertex_ao_16spp",
+  "compression": "EXT_meshopt_compression"
+}

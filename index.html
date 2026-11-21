@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>汐見町 Shiomi-chō — 海港小镇</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f74c0'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' fill='%23fff'%3E%E6%B1%90%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="canvas-wrap"></div>
+
+  <!-- Loading overlay -->
+  <div id="loader-screen" aria-live="polite">
+    <div class="loader-card">
+      <div class="loader-seal">汐見</div>
+      <h1 class="loader-title">汐見町 <span>Shiomi-chō</span></h1>
+      <p class="loader-sub">夏の午後、潮風の港町へ</p>
+      <div class="loader-bar-track">
+        <div id="loader-bar" class="loader-bar-fill"></div>
+      </div>
+      <div id="loader-text" class="loader-status">読み込み中… 0%</div>
+    </div>
+  </div>
+
+  <!-- Minimal Japanese HUD -->
+  <header id="hud-title" class="hud-panel" aria-label="Scene title">
+    <div class="title-mark">汐</div>
+    <div class="title-copy">
+      <div class="title-jp">汐見町</div>
+      <div class="title-en">Shiomi-chō</div>
+    </div>
+  </header>
+
+  <button id="btn-toggle-ui" class="hud-btn-icon" type="button" title="UIを表示/非表示 (H)" aria-label="Toggle UI">
+    <span class="icon-eye">◉</span>
+    <span class="btn-label">UI</span>
+  </button>
+
+  <nav id="hud-presets" class="hud-panel" aria-label="Camera presets">
+    <button class="preset-btn active" data-cam="overview" type="button">
+      <span class="p-jp">全景</span><span class="p-en">Overview</span>
+    </button>
+    <button class="preset-btn" data-cam="harbor" type="button">
+      <span class="p-jp">港口</span><span class="p-en">Harbor</span>
+    </button>
+    <button class="preset-btn" data-cam="street" type="button">
+      <span class="p-jp">商店街</span><span class="p-en">Street</span>
+    </button>
+    <button class="preset-btn" data-cam="shrine" type="button">
+      <span class="p-jp">神社</span><span class="p-en">Shrine</span>
+    </button>
+    <button class="preset-btn" data-cam="lighthouse" type="button">
+      <span class="p-jp">灯塔</span><span class="p-en">Lighthouse</span>
+    </button>
+    <button class="preset-btn" data-cam="crossing" type="button">
+      <span class="p-jp">踏切</span><span class="p-en">Crossing</span>
+    </button>
+  </nav>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
